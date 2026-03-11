@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: retail-rs
+  namespace: mahesh-ns
+  labels:
+    app: retail
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: retail-container
+          image: maheshnandi/flower-backend:latest
+          ports:
+            - containerPort: 3000
