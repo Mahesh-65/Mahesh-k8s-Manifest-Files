@@ -1,12 +1,12 @@
-apiVersion: v2
+apiVersion: v1
 kind: Pod
 metadata:
   name: retail-pod
   namespace: mahesh-ns
   labels:
-    app: retail
-  spec:
-   containers:
+    app: retail-cart
+spec:
+  containers:
     - name: retail-container
       image: likhithabhogyam/retail-inventory-app:v1.0.0
       ports:
