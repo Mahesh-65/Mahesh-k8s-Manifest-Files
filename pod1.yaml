@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: retail-container
-      image: likhithabhogyam/retail-inventory-app:v1.0.0
+      image: maheshnandi/flower-backend:latest
       ports:
         - containerPort: 3000
