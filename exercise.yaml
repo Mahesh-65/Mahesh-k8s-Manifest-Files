@@ -6,22 +6,22 @@ metadata:
   labels:
     app: fitness
   spec:
-  replcas: 8
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
-    selector:
-      matchLabels:
-        app: fitness
-    template:
-      metadata:
-        labels:
+    replcas: 8
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxUnavailable: 1
+        maxSurge: 1
+      selector:
+        matchLabels:
           app: fitness
-      spec:
-        containers:
-          - name: fitness-container
-            image: muralisocial123/fitness-app:v1.0.0
-            ports:
-              - containerPort: 3000
+      template:
+        metadata:
+          labels:
+            app: fitness
+        spec:
+          containers:
+            - name: fitness-container
+              image: muralisocial123/fitness-app:v1.0.0
+              ports:
+                - containerPort: 3000
