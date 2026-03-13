@@ -41,4 +41,4 @@ spec:
     - port: 3001 # this is a Service port number we use to expose application to the internet
       targetPort: 5000 # this is a Container port number we have defined in the Deployment file
       protocol: TCP
-  type: ClusterIP
+  type: NodePort
